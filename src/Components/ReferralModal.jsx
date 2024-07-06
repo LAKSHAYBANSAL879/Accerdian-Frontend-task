@@ -65,7 +65,7 @@ const ReferralModal = ({ isOpen, onRequestClose }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/referrals', {
+      const response = await axios.post('https://accerdian-backend-task-wl37.onrender.com/referrals', {
         refereeName,
         refereeEmail,
         refereePhone,
