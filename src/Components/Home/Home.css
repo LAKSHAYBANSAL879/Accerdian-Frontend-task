@@ -1,0 +1,11 @@
+#img1{
+    width: 450px;
+    height: 490px;
+    position: relative;
+    top: -118px;
+    left: 58px;
+}
+.active{
+    color:rgba(26, 115, 232, 1);
+    ;
+}
