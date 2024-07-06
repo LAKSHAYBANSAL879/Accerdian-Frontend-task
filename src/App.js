@@ -6,6 +6,7 @@ import Header3 from './Components/Home/Header3';
 import Benefits from './Components/Home/Benefits';
 import FAQ from './Components/Home/FAQ';
 import Contact from './Components/Home/Contact';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header3/>
   
      <Home/>
+     <ToastContainer/>
      <Benefits/>
      <FAQ/>
      <Contact/>

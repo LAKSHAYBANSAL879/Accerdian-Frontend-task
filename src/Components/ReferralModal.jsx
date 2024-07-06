@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import axios from 'axios';
 import { TextField, Button, Typography, Box } from '@mui/material';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const customStyles = {
   content: {
@@ -73,33 +73,21 @@ const ReferralModal = ({ isOpen, onRequestClose }) => {
         referrerEmail,
         referrerPhone,
       });
-      toast.success("Referral submitted successfully'")
+      toast.success("Referral submitted successfully");
       console.log('Referral submitted successfully', response.data);
       onRequestClose();
     } catch (error) {
+      toast.error("Error occurred while submitting referral");
       console.error('Error submitting referral', error);
     }
   };
 
   return (
-   
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       style={customStyles}
     >
-         <ToastContainer
-    position="top-center"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="light"
-  />
       <Typography variant="h6" color="primary" gutterBottom>Refer a Friend</Typography>
       <form onSubmit={handleSubmit}>
         <Typography variant="subtitle1" gutterBottom>Referee Details</Typography>
